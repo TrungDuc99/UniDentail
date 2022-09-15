@@ -1,0 +1,29 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": [".ios.tsx", ".android.tsx", ".ts", ".tsx", ".json"],
+        "root": ["./src"],
+        "alias": {
+          "@apis": "./src/apis",
+          "@assets": "./src/assets",
+          "@components": "./src/components",
+          "@configs": "./src/configs",
+          "@constants": "./src/constants",
+          "@mlkit": "./src/mlkit",
+          "@hooks": "./src/hooks",
+          "@modules": "./src/modules",
+          "@navigation": "./src/navigation",
+          "@redux": "./src/redux",
+          "@screens": "./src/screens",
+          "@services": "./src/services",
+          "@styles": "./src/styles",
+          "@utils": "./src/utils",
+          "@core": "./src/core",
+          "@ui": "./src/ui"
+        }
+      }
+    ]
+  ]
+}
