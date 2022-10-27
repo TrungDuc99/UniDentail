@@ -5,7 +5,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {FontFamily, ScaleSize} from '@configs';
 
 import {AuthStackParamList} from '@navigation/AuthNavigator';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {Image, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
@@ -37,6 +37,10 @@ export const Login = () => {
     console.log(data);
     signIn({access: 'access-token', refresh: 'refresh-token'});
   };
+  useEffect(() => {
+    // navigation.navigate('SignUp', {type: 'extra'});
+  }, []);
+
   return (
     <LinearGradient
       start={{x: 0, y: 1}}
@@ -64,7 +68,6 @@ export const Login = () => {
             </Text>
             <Text
               style={{fontFamily: FontFamily.Regular, fontSize: ScaleSize(25)}}>
-              {' '}
               is here
             </Text>
           </View>
@@ -72,7 +75,7 @@ export const Login = () => {
         <View style={{width: '70%'}}>
           <ButtonBase
             isShadow
-            label="Sign  up"
+            label="Sign  upppppppp"
             onPress={() => {
               navigation.navigate('SignUp', {type: 'extra'});
             }}

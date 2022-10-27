@@ -1,4 +1,6 @@
 import {ButtonBase, TouchableOpacityBase} from '@components/base';
+import {CodeInput} from '@components/base/fill-code-input';
+
 import Header from '@components/base/header';
 import Rectangle from '@components/base/rectangle';
 import {Colors, FontFamily, ScaleSize, Spacing} from '@configs';
@@ -6,7 +8,6 @@ import {AuthStackParamList} from '@navigation/AuthNavigator';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {ArrowRight, ArrowRotateLeft} from 'iconsax-react-native';
-
 import React from 'react';
 import {Image, Platform, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
@@ -24,6 +25,7 @@ export const VeriCationScreen = () => {
       <View style={{height: Platform.OS === 'ios' ? 70 : 50}}>
         <Header title="Privacy Policy" />
       </View>
+
       <View flex padding-20>
         <View centerH centerV style={{zIndex: 99999, marginTop: Spacing(20)}}>
           <Image
@@ -53,7 +55,7 @@ export const VeriCationScreen = () => {
           </Text>
         </View>
       </View>
-
+      <CodeInput lengthInput={6} />
       <View centerH>
         <View style={styles.btn}>
           <ButtonBase

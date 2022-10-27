@@ -23,35 +23,35 @@ export const PrivacyPolicyScreen = () => {
       <View style={{height: Platform.OS === 'ios' ? 70 : 50}}>
         <Header title="Privacy Policy" />
       </View>
-      {/* <ScrollView style={{height: '50%'}}> */}
-      <View style={{padding: 20, height: '74%'}}>
-        <Text style={styles.textTitle}>Terms of Service</Text>
-        <View marginV-10 />
-        <Text style={styles.textDecription}>
-          Computers have become ubiquitous in almost every facet of our lives.
-          At work, desk jockeys spend hours in front of their desktops, while
-          delivery people scan bar codes with handhelds and workers in the field
-          stay in touch with the central office via their notebooks. At home, we
-          rely on our desktops and notebooks to do our shopping, to entertain
-          us, and to keep us abreast of world events. We may not see our email
-          servers, but we count on them to deliver our email whenever and
-          wherever we want it. Our PDAs keep track of our hectic schedules, our
-          to-do lists, our contact lists, Even though computer hardware is
-          central to almost
-        </Text>
-        <View marginV-20 />
-        <Text style={styles.textTitle}>Privacy Policy:</Text>
-        <View marginV-10 />
-        <Text style={styles.textDecription}>
-          Computers have become ubiquitous in almost every facet of our lives.
-          At work, desk jockeys spend hours in front of their desktops, while
-          delivery people scan bar codes with handhelds and workers in the field
-          stay in touch with the central office via their notebooks. At home, we
-          rely on our desktops and notebooks to do our shopping, to entertain
-          us, and to keep us
-        </Text>
-      </View>
-      {/* </ScrollView> */}
+      <ScrollView style={{}}>
+        <View style={{padding: 20, height: '74%'}}>
+          <Text style={styles.textTitle}>Terms of Service</Text>
+          <View marginV-10 />
+          <Text style={styles.textDecription}>
+            Computers have become ubiquitous in almost every facet of our lives.
+            At work, desk jockeys spend hours in front of their desktops, while
+            delivery people scan bar codes with handhelds and workers in the
+            field stay in touch with the central office via their notebooks. At
+            home, we rely on our desktops and notebooks to do our shopping, to
+            entertain us, and to keep us abreast of world events. We may not see
+            our email servers, but we count on them to deliver our email
+            whenever and wherever we want it. Our PDAs keep track of our hectic
+            schedules, our to-do lists, our contact lists, Even though computer
+            hardware is central to almost
+          </Text>
+          <View marginV-20 />
+          <Text style={styles.textTitle}>Privacy Policy:</Text>
+          <View marginV-10 />
+          <Text style={styles.textDecription}>
+            Computers have become ubiquitous in almost every facet of our lives.
+            At work, desk jockeys spend hours in front of their desktops, while
+            delivery people scan bar codes with handhelds and workers in the
+            field stay in touch with the central office via their notebooks. At
+            home, we rely on our desktops and notebooks to do our shopping, to
+            entertain us, and to keep us
+          </Text>
+        </View>
+      </ScrollView>
       <LinearGradient
         start={{x: 0, y: 0.5}}
         end={{x: 0, y: 0}}
@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
   },
   linearGradientChildren: {
     width: '100%',
-
+    position: 'absolute',
+    bottom: 0,
     paddingHorizontal: 30,
     height: '20%',
     flexDirection: 'row',

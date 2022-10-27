@@ -1,10 +1,10 @@
 import {FontFamily} from '@configs';
-import TouchableOpacityBase from '@ui/touchableOpacity';
+// import TouchableOpacityBase from '@ui/touchableOpacity';
 import React, {useState} from 'react';
 import {Platform, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Text, View} from 'react-native-ui-lib';
-
+import {ActivityIndicator, TouchableOpacity} from 'react-native';
 interface ButtonBaseProps {
   label: string;
   btnType?: 'confirm' | 'cancel' | 'warning' | 'danger';
@@ -57,8 +57,8 @@ const ButtonBase = (props: ButtonBaseProps) => {
   });
 
   return (
-    <TouchableOpacityBase
-      onPress={onPress}
+    <TouchableOpacity
+      onPress={onPress && onPress}
       style={
         isShadow
           ? {
@@ -77,8 +77,7 @@ const ButtonBase = (props: ButtonBaseProps) => {
               },
               shadowOpacity: 0.5,
               shadowRadius: 10.51,
-
-              elevation: 15,
+              elevation: 30,
             }
           : {}
       }>
@@ -103,7 +102,7 @@ const ButtonBase = (props: ButtonBaseProps) => {
           )}
         </View>
       </LinearGradient>
-    </TouchableOpacityBase>
+    </TouchableOpacity>
   );
 };
 
